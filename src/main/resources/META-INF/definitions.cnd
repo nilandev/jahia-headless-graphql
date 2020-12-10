@@ -1,0 +1,14 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mynt = 'http://www.acme.org/jcr/mynt/1.0'>
+
+
+[mynt:experience] > jnt:content, jmix:droppableContent, jmix:editorialContent, jmix:droppableContent
+ - headline (string, richtext[ckeditor.toolbar='c042_feature_text_block_headline',ckeditor.customConfig='$context/modules/vw-jahia-components/javascript/c042_headline.js']) mandatory i18n
+ - strapline (string) i18n
+ - body (string, richtext[ckeditor.toolbar='c042_feature_text_block_body',ckeditor.customConfig='$context/modules/vw-jahia-components/javascript/c042_body.js']) mandatory i18n
+ - link (weakreference, picker[type='page']) i18n
+ - externalLink (string) i18n
+ - target (string, choicelist[resourceBundle]) nofulltext < '_blank','_parent','_self','_top'
+ - linkTitle (string)  i18n
+ - linkButtonColor (string, choicelist[resourceBundle]) nofulltext <  'default', 'orange'

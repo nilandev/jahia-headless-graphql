@@ -1,0 +1,15 @@
+type HeadlessExperience @mapping(node: "mynt:experience") {
+	metadata: Metadata 
+	body: String @mapping(property: "body")
+	description: String @mapping(property: "jcr:description")
+	externalLink: String @mapping(property: "externalLink")
+	headline: String @mapping(property: "headline")
+	strapline: String @mapping(property: "strapline")
+	linkTitle: String @mapping(property: "linkTitle")
+	linkButtonColor: String @mapping(property: "linkButtonColor")
+	target: String @mapping(property: "target")
+}
+
+extend type Query {
+	allFindAll: [HeadlessExperience]
+}
